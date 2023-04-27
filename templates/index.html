@@ -9,7 +9,8 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;           
+            box-sizing: border-box;
+            width: auto;           
         }
 
         h1 {
@@ -21,8 +22,8 @@
             width: auto;
             height: 1000px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-evenly;
-            border: 1px solid green;
             padding-top: 30px;
         }
 
@@ -36,6 +37,7 @@
 <body>
     <h1 style="text-align: center;">Welcome!</h1>
     <div class= "container">
+        <!-- This didn't work -->
         <!-- <div class = "box" style="background-color: #9fc5f8; height: 200px; width: 200px; border: 5px solid black;"></div> -->
         {% for i in range (0,x) %}
         <div class="box" style="background-color: {{color}}"></div>

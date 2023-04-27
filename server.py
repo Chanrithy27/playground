@@ -9,5 +9,9 @@ def start_playground():
 def display_boxes(x):
     return render_template("index.html", x = x, color= "#9fc5f8")
 
+@app.route('/play/<int:x>/<string:color>')
+def display_coloredboxes(x, color):
+    return render_template("index.html", x = x, color=color)
+
 if __name__=='__main__':
     app.run(debug=True, host='localhost', port=8000)
