@@ -5,15 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playground</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;           
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        .container {
+            width: auto;
+            height: 1000px;
+            display: flex;
+            justify-content: space-evenly;
+            border: 1px solid green;
+            padding-top: 30px;
+        }
+
+        .box {
+            height: 200px;
+            width: 200px;
+            border: 5px solid black;
+        }
+    </style>
 </head>
-<body style="box-sizing: border-box;">
+<body>
     <h1 style="text-align: center;">Welcome!</h1>
-    <div class="flex" style="display: flex; justify-content: space-evenly; height: 1000px; width: auto;">
-        <div style="background-color: #9fc5f8; height: 200px; width: 200px; border: 5px solid black;"></div>
-        <div style="background-color: #9fc5f8; height: 200px; width: 200px; border: 5px solid black;"></div>
-        <div style="background-color: #9fc5f8; height: 200px; width: 200px; border: 5px solid black;"></div>
-        <!-- <div style="background-color: #9fc5f8;"></div>
-        <div style="background-color: #9fc5f8;"></div> -->
+    <div class= "container">
+        <!-- <div class = "box" style="background-color: #9fc5f8; height: 200px; width: 200px; border: 5px solid black;"></div> -->
+        {% for i in range (0,x) %}
+        <div class="box" style="background-color: {{color}}"></div>
+        {% endfor %}
     </div>
 </body>
 </html>
